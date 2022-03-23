@@ -1,0 +1,57 @@
+
+Login
+http://localhost:8085/api/users/login
+JSON
+{
+    "email": "teasting@gmail.com",
+    "password": "javascript123"
+}
+
+Register
+http://localhost:8085/api/users/register
+exempel
+JSON
+{
+    "firstName": "Gäst",
+     "lastName": "Guest",
+      "email": "teasting@gmail.com",
+       "password": "javascript123"
+}
+
+GET
+http://localhost:8085/api/products
+eller enskild product
+http://localhost:8085/api/products/:id
+
+POST
+http://localhost:8085/api/users/login
+för att hämta token att kunna POST, PUT, DELETE products i databasen. På Headers i POSTMAN Authorization VALUE-Token
+
+ny product i databasen
+http://localhost:8085/api/products/new
+exempel
+JSON
+{
+    "name": "Asus GT67",
+    "short": "Lorem ipsum dolor sit, consectetur adipiscing elit. Curabitur a vulputate lectus. Mauris sollicitudin lorem urna, scelerisque efficit",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a vulputate lectus. Mauris sollicitudin lorem urna, scelerisque efficitur odio maximus sit amet. Nulla eleifend molestie lorem nec vehicula. In aliquam lacus in quam sodales bibendum eu a enim. Vivamus interdum dignissim velit, ut faucibus sem molestie quis.",
+    "price": "12595",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/5.jpg"
+}
+
+PUT
+exempel
+http://localhost:8085/api/products/620257d1700a78035c99a93a
+JSON
+{
+    "name": "Cheap Camera",
+        "short": "Lorem ipsum dolor sit, consectetur adipiscing elit. Curabitur a vulputate lectus. Mauris sollicitudin lorem urna, scelerisque efficitur",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a vulputate lectus. Mauris sollicitudin lorem urna, scelerisque efficitur odio maximus sit amet. Nulla eleifend molestie lorem nec vehicula. In aliquam lacus in quam sodales bibendum eu a enim. Vivamus interdum dignissim velit, ut faucibus sem molestie quis.",
+        "price": "1000",
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/9.jpg"
+}
+
+DELETE
+behövs product id
+http://localhost:8085/api/products/:id
+http://localhost:8085/api/products/60ca196d0f5e7851a4f4d963
